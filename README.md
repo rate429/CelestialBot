@@ -1,0 +1,2 @@
+# CelestialBot
+Discord.py bot
