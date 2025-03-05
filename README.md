@@ -1,2 +1,2 @@
 # CelestialBot
-Discord.py bot
+Discord.js bot

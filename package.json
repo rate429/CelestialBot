@@ -1,0 +1,27 @@
+{
+  "name": "celestialbot",
+  "version": "1.0.0",
+  "description": "A bot made for the rok project celestial jumper",
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "homepage": "https://github.com/rate429/CelestialBot#readme",
+  "bugs": {
+    "url": "https://github.com/rate429/CelestialBot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rate429/CelestialBot.git"
+  },
+  "license": "Apache-2.0",
+  "author": "rate429",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
