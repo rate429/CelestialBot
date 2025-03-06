@@ -19,9 +19,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "register": "node deploy-commands.js",
+    "unregister": "node unregister-commands.js "
   },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.12.1"
   }
 }
