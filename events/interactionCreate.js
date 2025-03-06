@@ -1,4 +1,4 @@
-const { Events, MessageFlags } = require('discord.js');
+const {ActionRowBuilder,ModalBuilder, Events, MessageFlags,TextInputBuilder,TextInputStyle } = require('discord.js');
 
 module.exports = {
     name: Events.InteractionCreate,
@@ -13,6 +13,20 @@ module.exports = {
         }
 
         try {
+            if (interaction.commandName === "embed") {
+                const modal = new ModalBuilder()
+                    .setTitle("embedBuilder")
+                    .setCustomId("embeddata")
+
+                const embedTitle = new TextInputBuilder()
+                    .setMaxLength(100)
+                    .setStyle(TextInputStyle.Short)
+                    .setRequired()
+                    .setLabel("embed title")
+                    .setCustomId("embedTitle")
+                const embedDiscription = new TextInputBuilder() 
+                    .
+            }
             await command.execute(interaction);
         } catch (error) {
             console.error(error);
