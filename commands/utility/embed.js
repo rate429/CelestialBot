@@ -1,12 +1,17 @@
-const { SlashCommandBuilder, EmbedBuilder, Embed} = require('discord.js');
+const {SlashCommandBuilder, EmbedBuilder, Embed,MessageFlags} = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embed')
         .setDescription('Starts embed building process.'),
-    
+
         
         async execute(interaction) {
-            console.log("using model refer to the interaction event. ")
-    },
+            interaction.channel
+            interaction.deferReply({ephemeral: true});
+            const embed = new EmbedBuilder()
+            .setName('Make a new embed!')
+            .setDescription('')
+
+        },
 };
