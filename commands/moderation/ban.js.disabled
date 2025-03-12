@@ -1,0 +1,42 @@
+const {SlashCommandBuilder,PermissionFlagsBits,EmbedBuilder,InteractionContextType} = require('discord.js');
+
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('ban')
+        .setDescription('Ban a member')
+        .addUserOption(option => option
+            .setName('member')
+            .setDescription('The member to ban.')
+            .setRequired(true)
+        )
+
+        .addStringOption(option =>
+            option
+                .setName('reason')
+                .setDescription('reason to ban')
+                .setRequired(true)
+        )
+        .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
+
+    async execute(interaction) {
+        const logChannel = await interaction.guild.channels.fetch(1345305762481569822)
+        const member = interaction.options.getMember('member');
+        const reason = interaction.options.getString('reason');
+        const 
+        const embed1 = new EmbedBuilder()
+            .setTitle(`**Banned ${interaction.options.getUser('member')}**`)
+            .setColor('#93080d')
+            .setDescription(`**Banned ${interaction.options.getUser('member')} for ${interaction.options.getString('reason')}** `)
+            .setFooter({text: `Ban issued by @${interaction.user.globalName}`,iconURL:interaction.user.displayAvatarURL()})
+            .setTimestamp()
+        const embed2 = new EmbedBuilder()
+            .setTitle(`**You have been banned from ${interaction.guild.name}**`)
+            .setColor('#93080d')
+            .setDescription(`You were banned for: ${interaction.options.getString('reason')} `)
+            .setImage(interaction.guild.iconURL())
+            .setFooter({text: `Ban issued by @${interaction.user.globalName}`,iconURL:interaction.user.displayAvatarURL()})
+            .setTimestamp()
+
+    }
+
+}
